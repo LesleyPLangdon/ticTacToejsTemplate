@@ -1,1 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+header {
+    height: 20vh;
+    background-color: darkblue;
+}
+main {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table {
+    border-collapse: collapse;
+    
 
+}
+td, .grid-item { 
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    
+}
+footer {
+    height: 20vh;
+    background-color: darkblue;
+}
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
