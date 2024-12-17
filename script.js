@@ -1,3 +1,4 @@
+let player1 = "X";
 let player2 = "O";
 let player = "";
 let turn = 0;
@@ -18,7 +19,7 @@ function playerMove() {
         player = player2;
         turn ++;
     }
-    document.getElementById("cell"+num).innerHTML = player;let player1 = "X";
+    document.getElementById("cell"+num).innerHTML = player;
 
 }
 
