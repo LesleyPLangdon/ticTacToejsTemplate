@@ -1,5 +1,7 @@
 let player1 = "X";
 let player2 = "O";
+// let player1Score = 0;
+// let player2Score = 0;
 
 let turn = 0;
 let square = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -33,16 +35,24 @@ function checkWinner(player) {
     (square[6] == square[7] && square[7] == square[8]) ||
     (square[0] == square[3] && square[3] == square[6]) ||
     (square[1] == square[4] && square[4] == square[7]) ||
-    (square[2] == square[5] && square[5] == square[6]) ||
+    (square[2] == square[5] && square[5] == square[8]) ||
     (square[0] == square[4] && square[4] == square[8]) ||
     (square[2] == square[4] && square[4] == square[6])) {
         document.getElementById("winner").innerHTML = player + "WINS!!!"
+        // if (player == "X") {
+        //     player1Score ++;
+        // } else {
+        //     player2Score ++;
+        // }
     }
 
 }
 
 /********************* Function resets the game board ********************************/
 function resetGame() {
-
+    for (let i = 1; i <= 9; i++) {
+        document.getElementById("cell"+ i).innerHTML = "";
+    }
+    document.getElementById("winner").innerHTML = "";
 }
 
